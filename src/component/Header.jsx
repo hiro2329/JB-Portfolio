@@ -1,8 +1,13 @@
 import { useState } from "react";
 
-const Header = () => {
+const Header = ({ introduceRef, projectRef }) => {
     // 모바일 메뉴 상태 관리
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    // 스크롤 위치로 이동하는 함수
+
+    const scrollToSection = (ref) => {
+        ref.current?.scrollIntoView({ behavior: "smooth" });
+    }
 
     return (
         <div>
@@ -23,11 +28,10 @@ const Header = () => {
                             </svg>
                         </button>
                     </div>
-                    <div className="hidden lg:flex lg:gap-x-12 bg-white/50 backdrop-blur-md rounded-4xl px-6 py-2 shadow-sm">
-                        <a href="#" className="text-sm/6 font-semibold text-gray-900">About</a>
-                        <a href="#" className="text-sm/6 font-semibold text-gray-900">Skills</a>
-                        <a href="#" className="text-sm/6 font-semibold text-gray-900">Project</a>
-                        <a href="#" className="text-sm/6 font-semibold text-gray-900">Experience</a>
+                    <div className="hidden lg:flex lg:gap-x-12 bg-white/50 backdrop-blur-md rounded-4xl px-6 py-2 shadow-sm ">
+                        <button onClick={() => scrollToSection(introduceRef)} className="text-sm/6 font-semibold text-gray-900 bg-transparent">Introduce</button>
+                        <button onClick={() => scrollToSection(projectRef)} className="text-sm/6 font-semibold text-gray-900 bg-transparent">Project</button>
+                        {/* <button onClick={() => scrollToSection(experienceRef)} className="text-sm/6 font-semibold text-gray-900 bg-transparent">Experience</button> */}
                     </div>
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                         <a href="#" className="text-sm/6 font-semibold text-gray-900">Contact <span aria-hidden="true">&rarr;</span></a>

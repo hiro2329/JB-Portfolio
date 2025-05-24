@@ -3,10 +3,10 @@ import Skills from './Skills';
 
 const Introduce = () => {
     return (
-        <div className="h-screen justify-center flex flex-col my-16 ">
+        <section className="min-h-screen flex flex-col justify-center relative isolate">
             <About />
             <Skills />
-        </div>
+        </section>
     );
 }
 export default Introduce;
