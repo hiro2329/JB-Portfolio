@@ -1,23 +1,21 @@
 function About() {
     return (
-        <section className="w-full bg-white py-16">
+        <section className="w-full bg-white py-16 mt-16">
             <div className="max-w-7xl mx-auto  px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 {/* Left: Text Content */}
                 <div>
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">ABOUT</h2>
+                    <h2 className="text-8xl font-bold text-gray-900 mb-4">ABOUT</h2>
                     <p className="text-gray-600 text-lg mb-6">
-                        Add breakpoints to your blank page,<br />
-                        then drop sections to have them<br />
-                        responsive out of the box.
+                        끊임없이 도전하는 개발자,<br />
+                        더미데이터 더미데이터 더미데이터<br />
+                        더미데이터더미데이터더미데이터 더미데이터<br />
+                        더미데이터더미데이터더미데이터 더미데이터<br />
+                        더미데이터더미데이터더미데이터 더미데이터<br />
+                        더미데이터더미데이터더미데이터 더미데이터<br />
+                        더미데이터더미데이터더미데이터 더미데이터<br />
+                        더미데이터더미데이터더미데이터 더미데이터<br />
+                        더미데이터더미데이터더미데이터 더미데이터<br />
                     </p>
-                    {/* <div className="flex gap-4">
-                        <button className="bg-black text-white font-semibold px-5 py-2 rounded-md shadow-md hover:shadow-lg transition">
-                            Get Started
-                        </button>
-                        <button className="bg-gray-100 text-gray-700 font-medium px-5 py-2 rounded-md hover:bg-gray-200 transition">
-                            Learn More
-                        </button>
-                    </div> */}
                 </div>
 
                 {/* Right: Image Placeholder */}

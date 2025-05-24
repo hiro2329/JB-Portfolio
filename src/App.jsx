@@ -1,7 +1,10 @@
 import './App.css'
-import About from './component/About'
 import Header from './component/Header'
 import Hero from './component/Hero'
+import Introduce from './component/Introduce'
+import Projects from './component/Projects'
+
+
 
 function App() {
 
@@ -10,7 +13,8 @@ function App() {
     <>
       <Header />
       <Hero />
-      <About />
+      <Introduce />
+      <Projects />
     </>
   )
 }

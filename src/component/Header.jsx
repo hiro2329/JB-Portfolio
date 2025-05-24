@@ -6,7 +6,7 @@ const Header = () => {
 
     return (
         <div>
-            <header className="absolute inset-x-0 top-0 z-50">
+            <header className="fixed inset-x-0 top-0 z-50" >
                 <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                     <div className="flex lg:flex-1">
 
@@ -23,7 +23,7 @@ const Header = () => {
                             </svg>
                         </button>
                     </div>
-                    <div className="hidden lg:flex lg:gap-x-12">
+                    <div className="hidden lg:flex lg:gap-x-12 bg-white/50 backdrop-blur-md rounded-4xl px-6 py-2 shadow-sm">
                         <a href="#" className="text-sm/6 font-semibold text-gray-900">About</a>
                         <a href="#" className="text-sm/6 font-semibold text-gray-900">Skills</a>
                         <a href="#" className="text-sm/6 font-semibold text-gray-900">Project</a>
@@ -61,9 +61,6 @@ const Header = () => {
                                         <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Skills</a>
                                         <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Project</a>
                                         <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Experience</a>
-                                    </div>
-                                    <div className="py-6">
-                                        <a href="#" className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>
                                     </div>
                                 </div>
                             </div>
