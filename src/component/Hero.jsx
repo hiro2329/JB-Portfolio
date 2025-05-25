@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const Hero = () => {
+const Hero = ({ sectionRef }) => {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -14,7 +14,7 @@ const Hero = () => {
 
 
     return (
-        <div className="min-h-screen bg-white flex items-center">
+        <section ref={sectionRef} className="min-h-screen bg-white flex items-center">
             <div className="relative isolate px-6 w-full">
                 {/* 상단 배경 */}
                 <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
@@ -62,7 +62,7 @@ const Hero = () => {
                     ></div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 export default Hero;

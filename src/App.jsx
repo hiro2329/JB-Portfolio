@@ -7,16 +7,17 @@ import { useRef } from "react";
 
 
 function App() {
-
+  // useRef를 사용하여 각 섹션에 대한 참조를 생성
+  const heroRef = useRef(null);
   const introduceRef = useRef(null);
   const projectRef = useRef(null);
 
   return (
     <>
-      <Header introduceRef={introduceRef} projectRef={projectRef} />
-      <Hero />
-      <Introduce ref={introduceRef} />
-      <Projects ref={projectRef} />
+      <Header heroRef={heroRef} introduceRef={introduceRef} projectRef={projectRef} />
+      <Hero sectionRef={heroRef} />
+      <Introduce sectionRef={introduceRef} />
+      <Projects sectionRef={projectRef} />
     </>
   )
 }

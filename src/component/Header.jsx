@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Header = ({ introduceRef, projectRef }) => {
+const Header = ({ heroRef, introduceRef, projectRef }) => {
     // 모바일 메뉴 상태 관리
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     // 스크롤 위치로 이동하는 함수
@@ -13,9 +13,14 @@ const Header = ({ introduceRef, projectRef }) => {
         <div>
             <header className="fixed inset-x-0 top-0 z-50" >
                 <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-                    <div className="flex lg:flex-1">
-
-                    </div>
+                    <ul className="flex lg:flex-1 ">
+                        <li
+                            className="cursor-pointer text-sm/6 font-semibold text-gray-900 bg-transparent transition hover:text-blue-600"
+                            onClick={() => scrollToSection(heroRef)}
+                        >
+                            Home
+                        </li>
+                    </ul>
                     <div className="flex lg:hidden">
                         <button
                             type="button"
@@ -28,11 +33,21 @@ const Header = ({ introduceRef, projectRef }) => {
                             </svg>
                         </button>
                     </div>
-                    <div className="hidden lg:flex lg:gap-x-12 bg-white/50 backdrop-blur-md rounded-4xl px-6 py-2 shadow-sm ">
-                        <button onClick={() => scrollToSection(introduceRef)} className="text-sm/6 font-semibold text-gray-900 bg-transparent">Introduce</button>
-                        <button onClick={() => scrollToSection(projectRef)} className="text-sm/6 font-semibold text-gray-900 bg-transparent">Project</button>
-                        {/* <button onClick={() => scrollToSection(experienceRef)} className="text-sm/6 font-semibold text-gray-900 bg-transparent">Experience</button> */}
-                    </div>
+                    <ul className="hidden lg:flex lg:gap-x-12 bg-white/50 backdrop-blur-md rounded-4xl px-6 py-2 shadow-sm">
+                        <li
+                            className="cursor-pointer text-sm/6 font-semibold text-gray-900 bg-transparent transition hover:text-blue-600"
+                            onClick={() => scrollToSection(introduceRef)}
+                        >
+                            Introduce
+                        </li>
+                        <li
+                            className="cursor-pointer text-sm/6 font-semibold text-gray-900 bg-transparent transition hover:text-blue-600"
+                            onClick={() => scrollToSection(projectRef)}
+                        >
+                            Project
+                        </li>
+                        {/* <li ...>Experience</li> */}
+                    </ul>
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                         <a href="#" className="text-sm/6 font-semibold text-gray-900">Contact <span aria-hidden="true">&rarr;</span></a>
                     </div>
